@@ -1,0 +1,9 @@
+Used Stack Overflow to determine how to use QDialog files.
+Links:
+
+https://doc.qt.io/qt-5/qfiledialog.html
+
+https://doc.qt.io/archives/qt-4.8/qfiledialog.html
+
+https://gis.stackexchange.com/questions/260022/how-to-add-a-filter-to-qfiledialog-getopenfilename
+

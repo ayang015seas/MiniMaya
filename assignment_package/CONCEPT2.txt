@@ -1,0 +1,7 @@
+(5 pts) When quadrangulating a face during Catmull-Clark subdivision, what information must you temporarily store in order to properly link your half-edge pointers without creating inaccessible edges?
+
+First, in order to actually quadrangulate the face, we need to compute centroids. After computing the centroids, we then compute all the new midpoints. These new midpoints will be the position of the new vertices that we will create. However, when we link up these new vertices, the half edge pointers that point to old vertices must be stored because the original half edge links to those vertices will be broken. As a result, we must store the old vertices in catmull clark subdivision in order to not result in broken links. 
+
+(5 pts) When extruding a face, what operation must be performed after all edges have been turned into quadrangles via the extrusion algorithm discussed in the lecture slides? What iteration of said operation must be specially handled?
+
+When we extrude a face, we have to link up the sym pointers between all of the new edges. For this problem, let’s say we extrude a square and thus create newFace1, newFace2, newFace3, and newFace4. If we run through the new faces and link up 1-2, 2-3, and 3-4, the special iteration that we must handle is to link the sym edges between new face 4 and new face1, so between the last and the first new face created. 

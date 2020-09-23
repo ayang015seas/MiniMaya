@@ -1,0 +1,7 @@
+(5 pts) What visual errors may occur when using linear blend skinning for a mesh? Why do these errors occur?
+
+The biggest visual error that occurs with linear blend skinning is the loss of volume. This is because the connections can become crossed, which is also known as the candy wrapper effect. 
+
+(5 pts) Since one cannot insert breakpoints into a GLSL shader program, how might one debug a shader? For example, if one were writing a vertex shader that applies a mesh skinning deformation, how might one determine which vertices are influenced by a particular joint? Consider what alterations to your fragment shader might be useful to test this.
+
+Since GLSL shaders have no print statements and no debuggers, the only way to really determine what vertices are associated by a particular joint is to visually change the color of hte vertices (as associated with specific joints). 

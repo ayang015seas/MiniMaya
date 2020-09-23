@@ -1,0 +1,7 @@
+(5 pts) Given a mesh with all of its half-edges created but none of its SYM pointers set, what is the minimum information needed to determine which half-edge should be the SYM of some other half-edge?
+
+We need the half edges to have pointers to the next half edges so that we can traverse the graph, but we also need the half edges to have all of their vertex pointers. Take an arbitrary vertex V1. If half edge A1 points to V1 and half edge B1 also points to V1, we know for sure that the half edge that A1 points to next is a sym edge for V1. 
+
+(5 pts) Which function in the Drawable class determines the primitives (i.e. triangles, lines, or points) with which a given mesh will be drawn? What does Drawable::elemCount return, and where is this value used?
+
+The drawMode function determines if wireframe or solid triangles are drawn. ElemCount returns the number of indices stored in the index buffer, which is used inShaderProgram::draw in order to determine how many vertices the function should draw. 
